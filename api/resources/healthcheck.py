@@ -2,6 +2,6 @@ from flask_restful import Resource
 from flask import jsonify
 
 
-class Hello(Resource):
+class HealthCheck(Resource):
     def get(self):
-        return jsonify({'message': 'hello world!'})
+        return jsonify({"status": "ok"})
