@@ -11,5 +11,7 @@ app.config['MONGO_URI'] = "mongodb://rsuser:qwerty741258@ds239648.mlab.com:39648
 mongo = PyMongo(app)
 
 from api.resources.healthcheck import HealthCheck
+from api.resources.user import User
 
 api.add_resource(HealthCheck, "/check")
+api.add_resource(User, "/user")
